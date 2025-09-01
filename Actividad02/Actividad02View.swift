@@ -49,20 +49,27 @@ struct Actividad02View: View {
                 }.shadow(radius: 20)
                 
                 VStack {
-                    Image("TheHangover")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 350)
-                        .clipShape(RoundedRectangle(cornerRadius: 20))
-                        .padding(20)
+                    ZStack {
+                        Image("TheHangover")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 350)
+                            .clipShape(RoundedRectangle(cornerRadius: 20))
+                            .padding(20)
+                        Text("Preventa").padding(.horizontal, 15)
+                            .padding(.vertical, 5)
+                            .background(Color.teal)
+                            .clipShape(RoundedRectangle(cornerRadius: 20))
+                            .frame(width: 320, height: 450, alignment: .bottomTrailing)
+                    }
                     HStack{
-                        Text("B15")
+                        Text("B")
                             .fontWeight(.bold)
                             .foregroundColor(.white)
                             .padding(5)
-                            .background(Color.yellow)
+                            .background(Color.orange)
                             .clipShape(RoundedRectangle(cornerRadius: 5))
-                        Text("1h 40min")
+                        Text("2h 10min")
                     }.frame(width: 350, alignment: .leading)
                     HStack{
                         Text("The Hangover").font(.system(size: 30, weight: .bold))
@@ -77,6 +84,44 @@ struct Actividad02View: View {
                         Image(systemName: "info.circle").foregroundColor(Color.blue)
                     }.frame(width: 350, alignment: .leading)
                 }.shadow(radius: 20)
+                
+                VStack {
+                    ZStack {
+                        Image("Madagascar")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 350)
+                            .clipShape(RoundedRectangle(cornerRadius: 20))
+                            .padding(20)
+                        Text("Preventa").padding(.horizontal, 15)
+                            .padding(.vertical, 5)
+                            .background(Color.teal)
+                            .clipShape(RoundedRectangle(cornerRadius: 20))
+                            .frame(width: 320, height: 450, alignment: .bottomTrailing)
+                    }
+                    HStack{
+                        Text("A")
+                            .fontWeight(.bold)
+                            .foregroundColor(.white)
+                            .padding(5)
+                            .background(Color.green)
+                            .clipShape(RoundedRectangle(cornerRadius: 5))
+                        Text("1h 52min")
+                    }.frame(width: 350, alignment: .leading)
+                    HStack{
+                        Text("Madagascar").font(.system(size: 30, weight: .bold))
+                            .lineLimit(2)
+                            .truncationMode(.middle)
+                    }.frame(width: 350, alignment: .leading)
+                        .padding()
+                    HStack {
+                        Text("Ver detalle").font(.system(size: 20))
+                            .underline(true, color: .blue)
+                            .foregroundColor(Color.blue)
+                        Image(systemName: "info.circle").foregroundColor(Color.blue)
+                    }.frame(width: 350, alignment: .leading)
+                }.shadow(radius: 20)
+                
             }
         }
     }
